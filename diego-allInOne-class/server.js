@@ -49,10 +49,5 @@ server.delete("/videos/:id", async (request, reply) => {
 });
 
 server.listen({
-  port: 3333,
+  port: process.env.PORT ?? 3333,
 });
-
-// Route Parameter => Parametro que é enviado pela rota
-// banco de dados em memoria => Quando eu armazeno os dados na memoria da aplicacao ( variavel ), o problema principal é que os dados sao perdidos uma vez que a aplicacao é reiniciada.
-// 201 => Algo foi criado
-// 204 => Sucesso, mas sem conteudo para retornar
