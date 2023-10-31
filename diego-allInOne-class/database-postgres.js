@@ -12,8 +12,6 @@ export class DatabasePostgres {
     } else {
       videos = await sql`select * from videos`;
     }
-
-    console.log(videos);
   }
 
   async create(video) {
